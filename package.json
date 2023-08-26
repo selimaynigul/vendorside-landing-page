@@ -1,0 +1,23 @@
+{
+  "name": "vendorside-landing-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "13.4.13",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
+    "react-social-icons": "^5.15.0",
+    "styled-components": "^6.0.7",
+    "swiper": "^10.0.4"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^2.1.4"
+  }
+}
