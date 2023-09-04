@@ -22,7 +22,7 @@ import {
 const CustomFooter = styled.footer`
   width: 100%;
   margin-top: 100px;
-  background-color: #36a693;
+  background-color: rgba(27, 24, 65, 1);
   display: flex;
   flex-direction: column;
   justify-content: center;

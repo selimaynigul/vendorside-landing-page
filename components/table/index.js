@@ -39,8 +39,11 @@ const Table = (props) => {
           <Column>İhale İçeriği:</Column>
           <Column2>
             <BtnBox>
-              <Button href="/login" target="_blank">
-                Dokümanı Gör
+              <Button
+                href="https://vendorside-api.medyasoft-innolab.com/api/Document/download/6c8deef54a8d484d8a09d571c806c952/TEMEL İSG SINAV SORULARI (3) (1).pdf"
+                target="_blank"
+              >
+                Dokümanı İndir
               </Button>
               <Button2 href={`/tenders/${props.id}`}>Detayları Gör</Button2>
             </BtnBox>

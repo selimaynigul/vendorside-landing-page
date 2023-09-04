@@ -12,6 +12,7 @@ const data = [
     subject:
       "Türk Eğitim Vakfı 2023 Finansal Tablolarının Bağımsız Denetimi Hizmet Alımı",
     country: "İstanbul / Türkiye",
+    type: "Danışmanlık",
     startDate: "20 Temmuz 2023",
     documentURL: "",
   },
@@ -28,6 +29,7 @@ const data = [
     subject:
       "Güçlendirmesi Yapılacak Köprü ve Duvarların Yapısal Analiz Hesaplamaları ile Projelerinin Hazırlanması",
     country: "Ankara / Türkiye",
+    type: "Hizmet",
     startDate: "18 Temmuz 2023",
   },
   {
@@ -41,6 +43,7 @@ const data = [
     header: "Toplu Ulaşım Odaklı Geliştirme Modelinin İstanbul'da Uygulanması",
     subject: "Toplu Ulaşım Odaklı Geliştirme Modelinin İstanbul'da Uygulanması",
     country: "Bursa / Türkiye",
+    type: "Hizmet",
     startDate: "10 Temmuz 2023",
   },
   {
@@ -54,6 +57,7 @@ const data = [
     header: "Tören Kıyafeti Alınması Mal Alımı İşi",
     subject: " Tören Kıyafeti Alınması Mal Alımı İşi",
     country: "İstanbul / Türkiye",
+    type: "Danışmanlık",
     startDate: "06 Temmuz 2023",
   },
   {
@@ -69,6 +73,7 @@ const data = [
     subject:
       " Tarsus Orman İşletme Müdürlüğü Açık Arttırmalı Odun Dışı Orman Ürünleri Satış İhalesi İşi",
     country: "Kocaeli / Türkiye",
+    type: "Mal Alım",
     startDate: "05 Temmuz 2023",
   },
   {
@@ -84,6 +89,7 @@ const data = [
     subject:
       " Türk Eğitim Vakfı 2023 Finansal Tablolarının Bağımsız Denetimi Hizmet Alımı",
     country: "İstanbul / Türkiye",
+    type: "Danışmanlık",
     startDate: "20 Temmuz 2023",
   },
   {
@@ -99,6 +105,7 @@ const data = [
     subject:
       "Güçlendirmesi Yapılacak Köprü ve Duvarların Yapısal Analiz Hesaplamaları ile Projelerinin Hazırlanması",
     country: "Ankara / Türkiye",
+    type: "Hizmet",
     startDate: "18 Temmuz 2023",
   },
   {
@@ -112,6 +119,7 @@ const data = [
     header: "Toplu Ulaşım Odaklı Geliştirme Modelinin İstanbul'da Uygulanması",
     subject: "Toplu Ulaşım Odaklı Geliştirme Modelinin İstanbul'da Uygulanması",
     country: "Bursa / Türkiye",
+    type: "Mal Alım",
     startDate: "10 Temmuz 2023",
   },
   {
@@ -125,6 +133,7 @@ const data = [
     header: "Tören Kıyafeti Alınması Mal Alımı İşi",
     subject: " Tören Kıyafeti Alınması Mal Alımı İşi",
     country: "Ankara / Türkiye",
+    type: "Mal Alım",
     startDate: "06 Temmuz 2023",
   },
   {
@@ -140,6 +149,7 @@ const data = [
     subject:
       " Tarsus Orman İşletme Müdürlüğü Açık Arttırmalı Odun Dışı Orman Ürünleri Satış İhalesi İşi",
     country: "Kocaeli / Türkiye",
+    type: "Mal Alım",
     startDate: "05 Temmuz 2023",
   },
   {
@@ -155,6 +165,7 @@ const data = [
     subject:
       " Türk Eğitim Vakfı 2023 Finansal Tablolarının Bağımsız Denetimi Hizmet Alımı",
     country: "İstanbul / Türkiye",
+    type: "Danışmanlık",
     startDate: "20 Temmuz 2023",
   },
   {
@@ -170,6 +181,7 @@ const data = [
     subject:
       "Güçlendirmesi Yapılacak Köprü ve Duvarların Yapısal Analiz Hesaplamaları ile Projelerinin Hazırlanması",
     country: "Ankara / Türkiye",
+    type: "Hizmet",
     startDate: "18 Temmuz 2023",
   },
   {
@@ -183,6 +195,7 @@ const data = [
     header: "Toplu Ulaşım Odaklı Geliştirme Modelinin İstanbul'da Uygulanması",
     subject: "Toplu Ulaşım Odaklı Geliştirme Modelinin İstanbul'da Uygulanması",
     country: "Bursa / Türkiye",
+    type: "Hizmet",
     startDate: "10 Temmuz 2023",
   },
   {
@@ -196,6 +209,7 @@ const data = [
     header: "Tören Kıyafeti Alınması Mal Alımı İşi",
     subject: " Tören Kıyafeti Alınması Mal Alımı İşi",
     country: "İstanbul / Türkiye",
+    type: "Mal Alım",
     startDate: "06 Temmuz 2023",
   },
   {
@@ -211,6 +225,7 @@ const data = [
     subject:
       " 2023-2024 Eğitim Öğretim Yılı Rize Merkez İlçe Özel Eğitim Taşıma Hizmet Alım İşi",
     country: "Bursa / Türkiye",
+    type: "Danışmanlık",
     startDate: "15 Haziran 2023",
   },
   {
@@ -226,6 +241,7 @@ const data = [
     subject:
       " Türk Eğitim Vakfı 2023 Finansal Tablolarının Bağımsız Denetimi Hizmet Alımı",
     country: "İstanbul / Türkiye",
+    type: "Danışmanlık",
     startDate: "20 Temmuz 2023",
   },
   {
@@ -241,6 +257,7 @@ const data = [
     subject:
       "Güçlendirmesi Yapılacak Köprü ve Duvarların Yapısal Analiz Hesaplamaları ile Projelerinin Hazırlanması",
     country: "Ankara / Türkiye",
+    type: "Danışmanlık",
     startDate: "18 Temmuz 2023",
   },
   {
@@ -254,6 +271,7 @@ const data = [
     header: "Toplu Ulaşım Odaklı Geliştirme Modelinin İstanbul'da Uygulanması",
     subject: "Toplu Ulaşım Odaklı Geliştirme Modelinin İstanbul'da Uygulanması",
     country: "Antalya / Türkiye",
+    type: "Danışmanlık",
     startDate: "10 Temmuz 2023",
   },
   {
@@ -267,6 +285,7 @@ const data = [
     header: "Tören Kıyafeti Alınması Mal Alımı İşi",
     subject: " Tören Kıyafeti Alınması Mal Alımı İşi",
     country: "İstanbul / Türkiye",
+    type: "Danışmanlık",
     startDate: "02 Nisan 2023",
   },
   {
@@ -282,6 +301,7 @@ const data = [
     subject:
       " Tarsus Orman İşletme Müdürlüğü Açık Arttırmalı Odun Dışı Orman Ürünleri Satış İhalesi İşi",
     country: "Sakarya / Türkiye",
+    type: "Danışmanlık",
     startDate: "15 Mart 2023",
   },
   {
@@ -295,6 +315,7 @@ const data = [
     header: "Tören Kıyafeti Alınması Mal Alımı İşi",
     subject: " Tören Kıyafeti Alınması Mal Alımı İşi",
     country: "İstanbul / Türkiye",
+    type: "Danışmanlık",
     startDate: "02 Nisan 2023",
   },
   {
@@ -310,6 +331,7 @@ const data = [
     subject:
       " Tarsus Orman İşletme Müdürlüğü Açık Arttırmalı Odun Dışı Orman Ürünleri Satış İhalesi İşi",
     country: "Sakarya / Türkiye",
+    type: "Danışmanlık",
     startDate: "15 Mart 2023",
   },
   {
@@ -323,6 +345,7 @@ const data = [
     header: "Tören Kıyafeti Alınması Mal Alımı İşi",
     subject: " Tören Kıyafeti Alınması Mal Alımı İşi",
     country: "İstanbul / Türkiye",
+    type: "Danışmanlık",
     startDate: "02 Nisan 2023",
   },
   {
@@ -338,6 +361,7 @@ const data = [
     subject:
       " Tarsus Orman İşletme Müdürlüğü Açık Arttırmalı Odun Dışı Orman Ürünleri Satış İhalesi İşi",
     country: "Sakarya / Türkiye",
+    type: "Danışmanlık",
     startDate: "15 Mart 2023",
   },
   {
@@ -351,6 +375,7 @@ const data = [
     header: "Toplu Ulaşım Odaklı Geliştirme Modelinin İstanbul'da Uygulanması",
     subject: "Toplu Ulaşım Odaklı Geliştirme Modelinin İstanbul'da Uygulanması",
     country: "Bursa / Türkiye",
+    type: "Danışmanlık",
     startDate: "10 Temmuz 2023",
   },
   {
@@ -364,6 +389,7 @@ const data = [
     header: "Tören Kıyafeti Alınması Mal Alımı İşi",
     subject: " Tören Kıyafeti Alınması Mal Alımı İşi",
     country: "İstanbul / Türkiye",
+    type: "Danışmanlık",
     startDate: "06 Temmuz 2023",
   },
   {
@@ -379,6 +405,7 @@ const data = [
     subject:
       " Tarsus Orman İşletme Müdürlüğü Açık Arttırmalı Odun Dışı Orman Ürünleri Satış İhalesi İşi",
     country: "Kocaeli / Türkiye",
+    type: "Danışmanlık",
     startDate: "05 Temmuz 2023",
   },
   {
@@ -394,6 +421,7 @@ const data = [
     subject:
       " Türk Eğitim Vakfı 2023 Finansal Tablolarının Bağımsız Denetimi Hizmet Alımı",
     country: "İstanbul / Türkiye",
+    type: "Danışmanlık",
     startDate: "20 Temmuz 2023",
   },
   {
@@ -409,6 +437,7 @@ const data = [
     subject:
       "Güçlendirmesi Yapılacak Köprü ve Duvarların Yapısal Analiz Hesaplamaları ile Projelerinin Hazırlanması",
     country: "Ankara / Türkiye",
+    type: "Danışmanlık",
     startDate: "18 Temmuz 2023",
   },
   {
@@ -422,6 +451,7 @@ const data = [
     header: "Toplu Ulaşım Odaklı Geliştirme Modelinin İstanbul'da Uygulanması",
     subject: "Toplu Ulaşım Odaklı Geliştirme Modelinin İstanbul'da Uygulanması",
     country: "Bursa / Türkiye",
+    type: "Danışmanlık",
     startDate: "10 Temmuz 2023",
   },
   {
@@ -435,6 +465,7 @@ const data = [
     header: "Tören Kıyafeti Alınması Mal Alımı İşi",
     subject: " Tören Kıyafeti Alınması Mal Alımı İşi",
     country: "Ankara / Türkiye",
+    type: "Danışmanlık",
     startDate: "06 Temmuz 2023",
   },
   {
@@ -450,6 +481,7 @@ const data = [
     subject:
       " Tarsus Orman İşletme Müdürlüğü Açık Arttırmalı Odun Dışı Orman Ürünleri Satış İhalesi İşi",
     country: "Kocaeli / Türkiye",
+    type: "Danışmanlık",
     startDate: "05 Temmuz 2023",
   },
   {
@@ -465,6 +497,7 @@ const data = [
     subject:
       " Türk Eğitim Vakfı 2023 Finansal Tablolarının Bağımsız Denetimi Hizmet Alımı",
     country: "İstanbul / Türkiye",
+    type: "Danışmanlık",
     startDate: "20 Temmuz 2023",
   },
   {
@@ -480,6 +513,7 @@ const data = [
     subject:
       "Güçlendirmesi Yapılacak Köprü ve Duvarların Yapısal Analiz Hesaplamaları ile Projelerinin Hazırlanması",
     country: "Ankara / Türkiye",
+    type: "Danışmanlık",
     startDate: "18 Temmuz 2023",
   },
   {
@@ -493,6 +527,7 @@ const data = [
     header: "Toplu Ulaşım Odaklı Geliştirme Modelinin İstanbul'da Uygulanması",
     subject: "Toplu Ulaşım Odaklı Geliştirme Modelinin İstanbul'da Uygulanması",
     country: "Bursa / Türkiye",
+    type: "Danışmanlık",
     startDate: "10 Temmuz 2023",
   },
 ];

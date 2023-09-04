@@ -1,14 +1,17 @@
 "use client";
+import React from "react";
 import styled from "styled-components";
 import { data } from "@/data/tendersData";
 
-const Details = () => {
+const Details = ({ params }) => {
+  const id = params.details;
+  const item = data.find((item) => item.id == id);
   return (
     <Container>
       {data && (
         <>
           <Header>
-            <Name>{data[0].header}</Name>
+            <Name>{item.header}</Name>
             <Button>Kayıt Ol</Button>
           </Header>
           <Box>
@@ -19,15 +22,15 @@ const Details = () => {
               </tr>
               <tr>
                 <Column>İhale Kayıt No</Column>
-                <Column2>{data[0].no}</Column2>
+                <Column2>{item.no}</Column2>
               </tr>
               <tr>
                 <Column>İhale Başlangıç Tarihi</Column>
-                <Column2>{data[0].startDate}</Column2>
+                <Column2>{item.startDate}</Column2>
               </tr>
               <tr>
                 <Column>İhale Bitiş Tarihi</Column>
-                <Column2>{data[0].endDate}</Column2>
+                <Column2>{item.endDate}</Column2>
               </tr>
 
               <tr>
@@ -40,7 +43,7 @@ const Details = () => {
 
               <tr>
                 <Column>İhale Açıklaması</Column>
-                <Column2>{data[0].content}</Column2>
+                <Column2>{item.content}</Column2>
               </tr>
               <tr>
                 <Column>İhale Ön Koşulları</Column>

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { useRouter } from "next/router";
 
 const NavContainer = styled.nav`
   display: flex;

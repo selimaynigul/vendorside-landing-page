@@ -12,7 +12,7 @@ const Pagination = ({
     label: `${index + 1}. Sayfa`,
   }));
 
-  return (
+  return hasMatchingItems ? (
     <PaginationContainer>
       <Button onClick={() => handleMoveToPage(1)} disabled={currentPage === 1}>
         ilk
@@ -46,6 +46,16 @@ const Pagination = ({
         son
       </Button>
     </PaginationContainer>
+  ) : (
+    <p
+      style={{
+        width: "fit-content",
+        margin: "20px auto",
+        color: "gray",
+      }}
+    >
+      Sonuç Bulunamadı
+    </p>
   );
 };
 

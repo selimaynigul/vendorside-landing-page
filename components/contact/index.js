@@ -40,10 +40,10 @@ const Wrapper = styled.section`
     "Lucida Sans", Arial, sans-serif;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  /*  background: rgb(27, 60, 219);
-  background: linear-gradient(292deg, #4d96ffff 0%, rgba(27, 60, 219, 1) 100%); */
-  background-color: #4d96ffff;
-
+  background: rgb(27, 60, 219);
+  background: linear-gradient(292deg, #4d96ffff 0%, rgba(27, 60, 219, 1) 100%);
+  /*   background-color: #4d96ffff;
+ */
   @media (max-width: 768px) {
     padding: 40px 20px;
     width: 95%;

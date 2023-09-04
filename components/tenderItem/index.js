@@ -8,7 +8,10 @@ const TenderItem = ({ data, id, toggleOpen, toggleClose }) => {
       <Container open={data.open} onClick={toggleOpen}>
         <MainContent open={data.open}>
           <Name>
-            <Heading>{data.header}</Heading>
+            <Heading type={data.type}>
+              <h1>{data.header}</h1>
+              <h3 title="İhale Türü">{data.type}</h3>
+            </Heading>
             <p>{data.header}</p>
           </Name>
           <Info>
@@ -33,13 +36,8 @@ const Container = styled.div`
   box-sizing: border-box;
   background-color: white;
   overflow: auto;
-  transition: all 0.3s ease;
   border-radius: 10px;
   cursor: ${(props) => (props.open ? "auto" : "pointer")};
-
-  @media (max-width: 600px) {
-    margin: 0 10px;
-  }
 `;
 
 const Info = styled.div`
@@ -52,8 +50,11 @@ const Info = styled.div`
 
   h3 {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 14px;
     color: #4d96ffff;
+    background-color: #f0f5ffff;
+    padding: 3px 5px;
+    border-radius: 5px;
   }
 
   p {
@@ -87,10 +88,28 @@ const Name = styled.div`
   }
 `;
 
-const Heading = styled.h1`
-  margin: 0;
-  color: #525e75ff;
-  font-size: 14px;
+const Heading = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+
+  h1 {
+    margin: 0;
+    color: #525e75ff;
+    font-size: 14px;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 14px;
+    /*  color: #ff9999ff;
+    background-color: #ffe5e5ff; */
+    color: #4fb0a6;
+    background-color: #edf7f6;
+    padding: 3px 5px;
+    border-radius: 5px;
+  }
 `;
 
 const MainContent = styled.div`
@@ -112,9 +131,14 @@ const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+  transition: all 0.3s ease;
 
   &:hover {
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.04);
+  }
+
+  @media (max-width: 600px) {
+    margin: 0 10px;
   }
 `;
 

@@ -48,7 +48,7 @@ const Container = styled.div`
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 6;
   background-color: #f4f6f9;
   border-bottom: ${(props) => (props.isFixed ? "2px solid white" : "none")};
   box-shadow: ${(props) =>

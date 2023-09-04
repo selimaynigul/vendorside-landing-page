@@ -5,8 +5,10 @@ import Nav from "./navBar";
 import { VscThreeBars, VscChromeClose } from "react-icons/vsc";
 import { TfiAngleRight } from "react-icons/tfi";
 import NavItem from "./navItem";
+import Sidebar from "../sidebar";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import image from "../../public/images/Logo_1.svg";
 
 const Backdrop = styled.div`
@@ -16,59 +18,7 @@ const Backdrop = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 5;
-`;
-
-const Sidebar = styled.div`
-  height: 100%;
-  width: 250px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  background-color: #36a693;
-  z-index: 6;
-  transition: transform 0.3s ease-in-out; /* Add the transition here */
-  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
-  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
-
-  div {
-    display: flex;
-    flex-direction: column;
-    margin-top: 60px;
-
-    * {
-      padding: 15px 20px;
-      margin: 0 10px;
-      border-radius: 10px;
-      color: white;
-      transition: 0.2s;
-
-      &:hover {
-        background-color: #71c1b3ff;
-      }
-    }
-  }
-`;
-
-const Heading = styled.nav`
-  background: rgb(22, 66, 59);
-  background: linear-gradient(
-    292deg,
-    rgba(58, 173, 155, 1) 0%,
-    rgba(22, 66, 59, 1) 100%
-  );
-  text-transform: uppercase;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  a {
-    color: white;
-    font-weight: bold;
-  }
+  z-index: 7;
 `;
 
 const NavMenu = styled.nav`
@@ -76,7 +26,7 @@ const NavMenu = styled.nav`
   display: flex;
   justify-content: center;
   padding: 5px 0;
-  height: 40px;
+  height: 60px;
   position: relative;
 
   nav {
@@ -90,6 +40,9 @@ const NavMenu = styled.nav`
 
   a {
     color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: 0.2s;
   }
 
   div {
@@ -98,6 +51,8 @@ const NavMenu = styled.nav`
     align-items: center;
     justify-content: space-between;
     transition: 0.3s;
+    background-color: red;
+
     @media (max-width: 1100px) {
       width: 95%;
     }
@@ -107,17 +62,12 @@ const NavMenu = styled.nav`
 const LoginButton = styled(Link)`
   color: #2a2663 !important;
   text-decoration: none;
-  display: inline;
   background-color: white;
   border-radius: 8px;
-  padding: 5px 6px 5px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  position: absolute;
-  right: 10%;
-  top: -20px;
 
   &:active {
     transform: scale(0.97);
@@ -148,16 +98,8 @@ const ArrowIcon = styled(TfiAngleRight)`
 `;
 
 const StyledImage = styled(Image)`
-  width: 120px;
+  width: 160px;
   height: auto;
-`;
-
-const SidebarLogo = styled(Image)`
-  width: 120px;
-  height: auto;
-  position: absolute;
-  bottom: 25px;
-  left: 25px;
 `;
 
 const MenuButton = styled.button`
@@ -189,12 +131,6 @@ const MenuButton = styled.button`
   }
 `;
 
-const CloseButton = styled(MenuButton)`
-  position: absolute;
-  top: 5px;
-  left: 15px;
-`;
-
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -218,45 +154,36 @@ const Header = () => {
 
   return (
     <header>
-      <Heading>
-        <NavItem href="/">Tedarik Zinciri Yönetimi</NavItem>
-      </Heading>
-
       <NavMenu>
         <div>
-          <Link href="/">
+          <Link href="https://vendorside.medyasoft-innolab.com/auth/login">
             <StyledImage src={image} />
           </Link>
           <MenuButton onClick={handleToggleSidebar}>
             <VscThreeBars className="menuIcon" />
           </MenuButton>
           <Nav width="500px">
-            <NavItem href="/about">Hakkımızda</NavItem>
-            <NavItem href="/">Tedarikçi Olmak</NavItem>
-            <NavItem href="/relations">Tedarikçi İlişkileri</NavItem>
-            <NavItem href="/tenders">İhaleler</NavItem>
+            <NavItem href="/about" active={usePathname() === "/about"}>
+              Hakkımızda
+            </NavItem>
+            <NavItem href="/" active={usePathname() === "/"}>
+              Tedarikçi Olmak
+            </NavItem>
+            <NavItem href="/relations" active={usePathname() === "/relations"}>
+              Tedarikçi İlişkileri
+            </NavItem>
+            <NavItem href="/tenders" active={usePathname() === "/tenders"}>
+              İhaleler
+            </NavItem>
           </Nav>
+          <LoginButton href="/">
+            Tedarikçi Girişi
+            <ArrowIcon />
+          </LoginButton>
         </div>
-        <LoginButton href="/">
-          Tedarikçi Girişi
-          <ArrowIcon />
-        </LoginButton>
       </NavMenu>
 
-      <Sidebar open={isSidebarOpen}>
-        <CloseButton onClick={handleToggleSidebar}>
-          <VscChromeClose className="menuIcon" />
-        </CloseButton>
-        <div onClick={handleToggleSidebar}>
-          <NavItem href="/about">Hakkımızda</NavItem>
-          <NavItem href="/">Tedarikçi Olmak</NavItem>
-          <NavItem href="/">Tedarikçi İlişkileri</NavItem>
-          <NavItem href="/tenders">İhaleler</NavItem>
-        </div>
-        <Link href="/">
-          <SidebarLogo src={image} />
-        </Link>
-      </Sidebar>
+      <Sidebar open={isSidebarOpen} onClose={handleToggleSidebar} />
       {isSidebarOpen && <Backdrop onClick={handleToggleSidebar} />}
     </header>
   );
