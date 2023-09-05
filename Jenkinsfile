@@ -8,7 +8,6 @@ pipeline {
             whoami
             lerna -v
 			yarn
-			lerna bootstrap
 			cd packages/app
 			yarn run build
 			'''
