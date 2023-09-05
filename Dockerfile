@@ -1,4 +1,4 @@
-FROM node:16.5.0-alpine3.14 as build-stage
+FROM node:16.15.1-alpine as build-stage
 # WORKDIR /packages/app
 # ENV PATH /app/node_modules/.bin:$PATH
 # COPY package.json /app/package.json
