@@ -28,7 +28,7 @@ const SearchBar = (props) => {
       <InputContainer>
         <Input
           type="search"
-          placeholder="İhale adı, yeri veya kayıt numarası ara..."
+          placeholder="İhale adı ara..."
           onChange={handleInputChange}
           onKeyPress={handleKeyPress}
         />

@@ -51,7 +51,6 @@ const NavMenu = styled.nav`
     align-items: center;
     justify-content: space-between;
     transition: 0.3s;
-    background-color: red;
 
     @media (max-width: 1100px) {
       width: 95%;

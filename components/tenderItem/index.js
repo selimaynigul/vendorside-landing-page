@@ -9,13 +9,13 @@ const TenderItem = ({ data, id, toggleOpen, toggleClose }) => {
         <MainContent open={data.open}>
           <Name>
             <Heading type={data.type}>
-              <h1>{data.header}</h1>
+              <h1>{data.title}</h1>
               <h3 title="İhale Türü">{data.type}</h3>
             </Heading>
-            <p>{data.header}</p>
+            <p>{data.description}</p>
           </Name>
           <Info>
-            <h3>{data.country}</h3>
+            <h3>{data.purchaserFullName}</h3>
             <p>{data.startDate}</p>
           </Info>
         </MainContent>
@@ -55,6 +55,7 @@ const Info = styled.div`
     background-color: #f0f5ffff;
     padding: 3px 5px;
     border-radius: 5px;
+    text-align: center;
   }
 
   p {

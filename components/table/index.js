@@ -8,7 +8,7 @@ const Table = (props) => {
         <tr>
           <Column>İhale Kayıt No: </Column>
           <Column2>
-            <p>{props.data.no}</p>
+            <p>{props.data.employmentId}</p>
           </Column2>
         </tr>
         <tr>
@@ -26,13 +26,13 @@ const Table = (props) => {
         <tr>
           <Column>İhale Açıklaması:</Column>
           <Column2>
-            <p>{props.data.content}</p>
+            <p>{props.data.description}</p>
           </Column2>
         </tr>
         <tr>
           <Column>İhale Ön Koşulları:</Column>
           <Column2>
-            <p>{props.data.conditions}</p>
+            <p>{props.data.preconditions}</p>
           </Column2>
         </tr>
         <tr>

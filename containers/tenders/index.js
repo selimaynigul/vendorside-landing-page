@@ -4,14 +4,13 @@ import SearchBar from "@/components/searchBar";
 import Pagination from "@/components/pagination";
 import TendersContainer from "@/components/tendersContainer";
 import { useState, useEffect } from "react";
-import { data } from "../../data/tendersData";
-import dynamic from "next/dynamic";
+/* import { data } from "../../data/tendersData";
+ */ import dynamic from "next/dynamic";
 
-const Tenders = () => {
-  const newData = data.map((item) => {
-    return { ...item, open: false };
+const Tenders = ({ data }) => {
+  const newData = data.map((item, index) => {
+    return { ...item, open: false, id: index + 1 };
   });
-
   const [hasMatchingItems, setHasMatchingItems] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [mappedData, setMappedData] = useState(newData);
@@ -27,7 +26,6 @@ const Tenders = () => {
         open: prevItem.id === item.id ? true : false,
       }))
     );
-    console.log(mappedData);
   };
 
   const toggleClose = (item) => {
@@ -54,11 +52,8 @@ const Tenders = () => {
   };
 
   const filterTenderItems = (searchTerm) => {
-    const filteredItems = newData.filter(
-      (item) =>
-        item.header.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.country.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.no.includes(searchTerm)
+    const filteredItems = newData.filter((item) =>
+      item.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setMappedData(filteredItems);
     setHasMatchingItems(filteredItems.length > 0);
